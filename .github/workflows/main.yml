@@ -9,9 +9,8 @@ jobs:
             curl -X POST "https://api.github.com/repos/meditator3/node-hello/actions/workflows/trigger-by-parameter.yml/dispatches" \
             -H 'Accept: application/vnd.github.v3+json' \
             --header 'Authorization: Bearer ${{ secrets.PAT }}' \
-            echo "${{ github.ref }}" \
             -d '{
-                "ref": "${{ github.ref }}",
+                "ref": "refs/heads/master",
                 "inputs": {
                   "source_branch": "secondary",
                   "destination_branch": "master"
