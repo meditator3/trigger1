@@ -2,6 +2,7 @@ on:
   push:
 jobs:
   trigger-workflow-from-other-repo:
+  # triggered repo should be added "depository_dispatch: types [trigger-workflow]"
     runs-on: ubuntu-latest
     steps:
       - name: trigger another workflow from node-hello repo
