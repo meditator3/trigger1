@@ -11,6 +11,6 @@ jobs:
             --header 'Authorization: Bearer ${{ secrets.PAT }}' \
             -d '{"ref": "${{ github.ref }}"}' \
       - name: Debug PAT secret
-        run: echo ${{ secrets.PAT }}
+        run: echo "${{ secrets.PAT }}"
 
   
