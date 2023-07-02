@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: trigger another workflow git-action-demo
         run: |
-            curl -X POST https://api.github.com/repos/${{ github.repository }}/actions/workflows/trigger-by-parameter.yml/dispatches
+            curl -X POST https://api.github.com/repos/meditator3/node-hello/actions/workflows/trigger-by-parameter.yml/dispatches
             -H 'Accept: application/vnd.github.v3+json' \
             --header 'Authorization: Bearer ${{ secrets.REPO_ACCESS_TOKEN }}' \
             --data '{"ref": "${{ github.ref }}"}'
