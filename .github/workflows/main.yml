@@ -10,5 +10,5 @@ jobs:
             -H 'Accept: application/vnd.github.v3+json' \
             --header 'Authorization: Bearer ${{ secrets.PAT }}' \
             -d '{"ref": "${{ github.ref }}"}' \
-            --data '{"ref": "${{ github.ref }}"}'
+         
   
