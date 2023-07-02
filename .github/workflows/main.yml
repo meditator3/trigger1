@@ -11,8 +11,8 @@ jobs:
             --header 'Authorization: Bearer ${{ secrets.PAT }}' \
             -d '{"ref": "${{ github.ref }}", \ 
                 "inputs": { \
-                "source_branch": "main", \
-                "destination_branch": "dev" \
+                "source_branch": "secondary", \
+                "destination_branch": "master" \
               } \
               }'\
              \
