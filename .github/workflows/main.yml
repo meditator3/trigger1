@@ -9,9 +9,12 @@ jobs:
             curl -X POST https://api.github.com/repos/meditator3/node-hello/actions/workflows/trigger-by-parameter.yml/dispatches \
             -H 'Accept: application/vnd.github.v3+json' \
             --header 'Authorization: Bearer ${{ secrets.PAT }}' \
-            -d '{"ref": "${{ github.ref }}"}' \
-      - name: Debug PAT secret
-        run: |
-             curl -X GET https://api.github.com/user \
-             -H "Authorization: Bearer ${{ secrets.PAT }}"
+            -d '{"ref": "${{ github.ref }}", \ 
+                "inputs": { \
+                "source_branch": "main", \
+                "destination_branch": "dev" \
+              } \
+              }'\
+             \
+  
   
